@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <title>Фильтр 2</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="input/bootstrap-4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="input/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="input/jquery/jquery-3.4.1.min.js"></script>
+    <script src="input/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+
+    <!--[if IE]>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('main');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="goods">
+            <div class="col-sm-4">
+                <div class="product" data-id="1" data-parameter-color="red" data-parameter-size="S"
+                    data-parameter-direction="top" data-parameter-mass="20" data-parameter-strength="100"
+                    data-parameter-flexibility="max">
+                    <div>Название товара</div>
+                    <hr>
+                    <div>Цвет = red</div>
+                    <div>Размер = S</div>
+                    <div>Направление №3 = top</div>
+                    <div>Масса = 20</div>
+                    <div>Прочность = 100</div>
+                    <div>Гибкость = max</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="product" data-id="2" data-parameter-color="blue" data-parameter-size="M"
+                    data-parameter-direction="top" data-parameter-mass="20" data-parameter-strength="300"
+                    data-parameter-flexibility="min">
+                    <div>Название товара</div>
+                    <hr>
+                    <div>Цвет = blue</div>
+                    <div>Размер = M</div>
+                    <div>Направление №3 = top</div>
+                    <div>Масса = 20</div>
+                    <div>Прочность = 300</div>
+                    <div>Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="product" data-id="3" data-parameter-color="red" data-parameter-size="S"
+                    data-parameter-direction="top" data-parameter-mass="20" data-parameter-strength="100"
+                    data-parameter-flexibility="max">
+                    <div>Название товара</div>
+                    <hr>
+                    <div>Цвет = red</div>
+                    <div>Размер = S</div>
+                    <div>Направление №3 = top</div>
+                    <div>Масса = 20</div>
+                    <div>Прочность = 100</div>
+                    <div>Гибкость = max</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row" id="filters">
+            <!-- чекбоксы -->
+            <div class="col-sm-2 filter" data-parameter="color">
+                <div>Цвет</div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox1" value="red" checked>
+                    <label class="form-check-label" for="checkbox1">red</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox2" value="blue">
+                    <label class="form-check-label" for="checkbox2">blue</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox3" value="yellow">
+                    <label class="form-check-label" for="checkbox3">yellow</label>
+                </div>
+            </div>
+
+            <div class="col-sm-2 filter" data-parameter="size">
+                <div>Размер</div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox4" value="M">
+                    <label class="form-check-label" for="checkbox4">M</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox5" value="S">
+                    <label class="form-check-label" for="checkbox5">S</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox6" value="XL" checked>
+                    <label class="form-check-label" for="checkbox6">XL</label>
+                </div>
+            </div>
+
+            <!-- радиокнопки -->
+            <div class="col-sm-2 filter" data-parameter="direction">
+                <div>Направление</div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio1"
+                        value="top" checked>
+                    <label class="form-check-label" for="radio1">top</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio2"
+                        value="bottom">
+                    <label class="form-check-label" for="radio2">bottom</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio3"
+                        value="left">
+                    <label class="form-check-label" for="radio3">left</label>
+                </div>
+            </div>
+
+            <div class="col-sm-2 filter" data-parameter="mass">
+                <div>Масса</div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio4"
+                        value="10">
+                    <label class="form-check-label" for="radio4">10</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio5"
+                        value="20">
+                    <label class="form-check-label" for="radio5">20</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio6"
+                        value="30" checked>
+                    <label class="form-check-label" for="radio6">30</label>
+                </div>
+            </div>
+
+            <!-- селекты -->
+            <div class="col-sm-2 filter" data-parameter="strength">
+                <div>Прочность</div>
+                <hr>
+                <select class="custom-select">
+                    <option selected>Выберите прочность</option>
+                    <option class="parameter-value" value="100">100</option>
+                    <option class="parameter-value" value="200">200</option>
+                    <option class="parameter-value" value="300">300</option>
+                </select>
+            </div>
+
+            <div class="col-sm-2 filter" data-parameter="flexibility">
+                <div>Гибкость</div>
+                <hr>
+                <select class="custom-select">
+                    <option>Выберите гибкость</option>
+                    <option class="parameter-value" value="min" selected>min</option>
+                    <option class="parameter-value" value="max">max</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-primary btn-sm btn-block" id="filterButton">Фильтровать</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
