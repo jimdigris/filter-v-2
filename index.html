@@ -31,49 +31,44 @@
 <body>
 
     <div class="container">
-        <div class="row" id="goods">
+        <div class="row" id="products">
+
             <div class="col-sm-4">
-                <div class="product" data-id="1" data-parameter-color="red" data-parameter-size="S"
-                    data-parameter-direction="top" data-parameter-mass="20" data-parameter-strength="100"
-                    data-parameter-flexibility="max">
-                    <div>Название товара</div>
+                <div class="product">
+                    <div data-id='1'>Название товара 1</div>
                     <hr>
-                    <div>Цвет = red</div>
-                    <div>Размер = S</div>
-                    <div>Направление №3 = top</div>
-                    <div>Масса = 20</div>
-                    <div>Прочность = 100</div>
-                    <div>Гибкость = max</div>
+                    <div data-color='red'>Цвет = red</div>
+                    <div data-size='S'>Размер = S</div>
+                    <div data-direction='top'>Направление = top</div>
+                    <div data-massa='20'>Масса = 20</div>
+                    <div data-strength='100'>Прочность = 100</div>
+                    <div data-flexibility='max'>Гибкость = max</div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class="product" data-id="2" data-parameter-color="blue" data-parameter-size="M"
-                    data-parameter-direction="bottom" data-parameter-mass="20" data-parameter-strength="300"
-                    data-parameter-flexibility="min">
-                    <div>Название товара</div>
+                <div class="product">
+                    <div data-id='1'>Название товара 2</div>
                     <hr>
-                    <div>Цвет = blue</div>
-                    <div>Размер = M</div>
-                    <div>Направление №3 = bottom</div>
-                    <div>Масса = 20</div>
-                    <div>Прочность = 300</div>
-                    <div>Гибкость = min</div>
+                    <div data-color='yellow'>Цвет = yellow</div>
+                    <div data-size='XL'>Размер = XL</div>
+                    <div data-direction='top'>Направление = top</div>
+                    <div data-massa='30'>Масса = 30</div>
+                    <div data-strength='200'>Прочность = 200</div>
+                    <div data-flexibility='min'>Гибкость = min</div>
                 </div>
             </div>
 
             <div class="col-sm-4">
-                <div class="product" data-id="3" data-parameter-color="red" data-parameter-size="S"
-                    data-parameter-direction="top" data-parameter-mass="20" data-parameter-strength="100"
-                    data-parameter-flexibility="max">
-                    <div>Название товара</div>
+                <div class="product">
+                    <div data-id='1'>Название товара 3</div>
                     <hr>
-                    <div>Цвет = red</div>
-                    <div>Размер = S</div>
-                    <div>Направление №3 = top</div>
-                    <div>Масса = 20</div>
-                    <div>Прочность = 100</div>
-                    <div>Гибкость = max</div>
+                    <div data-color='blue'>Цвет = blue</div>
+                    <div data-size='M'>Размер = M</div>
+                    <div data-direction='bottom'>Направление = bottom</div>
+                    <div data-massa='10'>Масса = 10</div>
+                    <div data-strength='300'>Прочность = 300</div>
+                    <div data-flexibility='min'>Гибкость = min</div>
                 </div>
             </div>
 
@@ -85,7 +80,7 @@
     <div class="container">
         <div class="row" id="filters">
             <!-- чекбоксы -->
-            <div class="col-sm-2 filter" data-parameter="color">
+            <div class="col-sm-2 filter data-color">
                 <div>Цвет</div>
                 <hr>
                 <div class="form-check">
@@ -102,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-2 filter" data-parameter="size">
+            <div class="col-sm-2 filter data-size">
                 <div>Размер</div>
                 <hr>
                 <div class="form-check">
@@ -120,7 +115,7 @@
             </div>
 
             <!-- радиокнопки -->
-            <div class="col-sm-2 filter" data-parameter="direction">
+            <div class="col-sm-2 filter data-direction">
                 <div>Направление</div>
                 <hr>
                 <div class="form-check">
@@ -140,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-2 filter" data-parameter="mass">
+            <div class="col-sm-2 filter data-massa">
                 <div>Масса</div>
                 <hr>
                 <div class="form-check">
@@ -161,7 +156,7 @@
             </div>
 
             <!-- селекты -->
-            <div class="col-sm-2 filter" data-parameter="strength">
+            <div class="col-sm-2 filter data-strength">
                 <div>Прочность</div>
                 <hr>
                 <select class="custom-select">
@@ -172,7 +167,7 @@
                 </select>
             </div>
 
-            <div class="col-sm-2 filter" data-parameter="flexibility">
+            <div class="col-sm-2 filter data-flexibility">
                 <div>Гибкость</div>
                 <hr>
                 <select class="custom-select">
