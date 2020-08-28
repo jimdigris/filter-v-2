@@ -35,40 +35,40 @@
 
             <div class="col-sm-4">
                 <div class="product">
-                    <div data-id='1'>Название товара 1</div>
+                    <div data-id='1' class="id">Название товара 1</div>
                     <hr>
-                    <div data-color='red'>Цвет = red</div>
-                    <div data-size='S'>Размер = S</div>
-                    <div data-direction='top'>Направление = top</div>
-                    <div data-massa='20'>Масса = 20</div>
-                    <div data-strength='100'>Прочность = 100</div>
-                    <div data-flexibility='max'>Гибкость = max</div>
+                    <div data-color='red' class="color">Цвет = red</div>
+                    <div data-size='S' class="size">Размер = S</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='20' class="massa">Масса = 20</div>
+                    <div data-strength='100' class="strength">Прочность = 100</div>
+                    <div data-flexibility='max' class="flexibility">Гибкость = max</div>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="product">
-                    <div data-id='1'>Название товара 2</div>
+                    <div data-id='2' class="id">Название товара 2</div>
                     <hr>
-                    <div data-color='yellow'>Цвет = yellow</div>
-                    <div data-size='XL'>Размер = XL</div>
-                    <div data-direction='top'>Направление = top</div>
-                    <div data-massa='30'>Масса = 30</div>
-                    <div data-strength='200'>Прочность = 200</div>
-                    <div data-flexibility='min'>Гибкость = min</div>
+                    <div data-color='yellow' class="color">Цвет = yellow</div>
+                    <div data-size='XL' class="size">Размер = XL</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='30' class="massa">Масса = 30</div>
+                    <div data-strength='200' class="strength">Прочность = 200</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
                 </div>
             </div>
 
             <div class="col-sm-4">
                 <div class="product">
-                    <div data-id='1'>Название товара 3</div>
+                    <div data-id='3' class="id">Название товара 3</div>
                     <hr>
-                    <div data-color='blue'>Цвет = blue</div>
-                    <div data-size='M'>Размер = M</div>
-                    <div data-direction='bottom'>Направление = bottom</div>
-                    <div data-massa='10'>Масса = 10</div>
-                    <div data-strength='300'>Прочность = 300</div>
-                    <div data-flexibility='min'>Гибкость = min</div>
+                    <div data-color='blue' class="color">Цвет = blue</div>
+                    <div data-size='M' class="size">Размер = M</div>
+                    <div data-direction='bottom' class="direction">Направление = bottom</div>
+                    <div data-massa='10' class="massa">Масса = 10</div>
+                    <div data-strength='300' class="strength">Прочность = 300</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
                 </div>
             </div>
 
@@ -80,100 +80,100 @@
     <div class="container">
         <div class="row" id="filters">
             <!-- чекбоксы -->
-            <div class="col-sm-2 filter data-color">
+            <div class="col-sm-2 filter color">
                 <div>Цвет</div>
                 <hr>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox1" value="red" checked>
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox1" value="red" checked>
                     <label class="form-check-label" for="checkbox1">red</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox2" value="blue">
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox2" value="blue">
                     <label class="form-check-label" for="checkbox2">blue</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox3" value="yellow">
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox3" value="yellow">
                     <label class="form-check-label" for="checkbox3">yellow</label>
                 </div>
             </div>
 
-            <div class="col-sm-2 filter data-size">
+            <div class="col-sm-2 filter size">
                 <div>Размер</div>
                 <hr>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox4" value="M">
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox4" value="M">
                     <label class="form-check-label" for="checkbox4">M</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox5" value="S">
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox5" value="S">
                     <label class="form-check-label" for="checkbox5">S</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="checkbox" id="checkbox6" value="XL" checked>
+                    <input class="form-check-input characteristic" type="checkbox" id="checkbox6" value="XL" checked>
                     <label class="form-check-label" for="checkbox6">XL</label>
                 </div>
             </div>
 
             <!-- радиокнопки -->
-            <div class="col-sm-2 filter data-direction">
+            <div class="col-sm-2 filter direction">
                 <div>Направление</div>
                 <hr>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio1"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios" id="radio1"
                         value="top" checked>
                     <label class="form-check-label" for="radio1">top</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio2"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios" id="radio2"
                         value="bottom">
                     <label class="form-check-label" for="radio2">bottom</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios" id="radio3"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios" id="radio3"
                         value="left">
                     <label class="form-check-label" for="radio3">left</label>
                 </div>
             </div>
 
-            <div class="col-sm-2 filter data-massa">
+            <div class="col-sm-2 filter massa">
                 <div>Масса</div>
                 <hr>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio4"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios2" id="radio4"
                         value="10">
                     <label class="form-check-label" for="radio4">10</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio5"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios2" id="radio5"
                         value="20">
                     <label class="form-check-label" for="radio5">20</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input parameter-value" type="radio" name="exampleRadios2" id="radio6"
+                    <input class="form-check-input characteristic" type="radio" name="exampleRadios2" id="radio6"
                         value="30" checked>
                     <label class="form-check-label" for="radio6">30</label>
                 </div>
             </div>
 
             <!-- селекты -->
-            <div class="col-sm-2 filter data-strength">
+            <div class="col-sm-2 filter strength">
                 <div>Прочность</div>
                 <hr>
                 <select class="custom-select">
                     <option selected>Выберите прочность</option>
-                    <option class="parameter-value" value="100">100</option>
-                    <option class="parameter-value" value="200">200</option>
-                    <option class="parameter-value" value="300">300</option>
+                    <option class="characteristic" value="100">100</option>
+                    <option class="characteristic" value="200">200</option>
+                    <option class="characteristic" value="300">300</option>
                 </select>
             </div>
 
-            <div class="col-sm-2 filter data-flexibility">
+            <div class="col-sm-2 filter flexibility">
                 <div>Гибкость</div>
                 <hr>
                 <select class="custom-select">
                     <option>Выберите гибкость</option>
-                    <option class="parameter-value" value="min" selected>min</option>
-                    <option class="parameter-value" value="max">max</option>
+                    <option class="characteristic" value="min" selected>min</option>
+                    <option class="characteristic" value="max">max</option>
                 </select>
             </div>
         </div>
