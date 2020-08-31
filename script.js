@@ -17,36 +17,54 @@ function getProducts() {
         products.push(product);
     });
 
-    console.log(products);
     return products;
 }
 
+
 function getFiltres() {
     const ELEMENTS = document.querySelector('#filters');
+
     let filters = {
-        id: getFilterCharacteristic('id'),
-        color: '',
-        size: '',
-        direction: '',
-        massa: '',
-        strength: '',
-        flexibility: ''
+        color: getFilterCharacteristic('color'),
+        size: getFilterCharacteristic('size'),
+        direction: getFilterCharacteristic('direction'),
+        massa: getFilterCharacteristic('massa'),
+        strength: getFilterCharacteristic('strength'),
+        flexibility: getFilterCharacteristic('flexibility')
     };
 
     function getFilterCharacteristic(filterName) {
         let characteristics = [];
-        //let elements = ELEMENTS.querySelectorAll(filterName);
+        let elements = Array.from(ELEMENTS.querySelector(`.filter-${filterName}`).querySelectorAll('.characteristic'));
 
+
+        elements.forEach(function (element) {
+            if (element.checked || element.selected) {
+                characteristics.push(element.getAttribute(`data-${filterName}`));
+            }
+        });
 
         return characteristics;
     }
 
-
-
-    console.log(ELEMENTS);
     return filters;
 }
 
 
-getProducts();
-getFiltres();
+(function () {
+    const BUTTON = document.querySelector('#filterButton');
+    const BUTTON = document.querySelector('#filterResult');
+
+    let filters = {};
+    let products = {};
+
+    BUTTON.addEventListener('click', onFilterButtonClick);
+
+    function onFilterButtonClick() {
+        filters = getProducts();
+        products = getFiltres();
+
+        console.log(filters);
+        console.log(products);
+    }
+})(); 
