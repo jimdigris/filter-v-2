@@ -1,5 +1,6 @@
 'use strict';
 
+// получаем продукты с их свойствами
 function getProducts() {
     const ELEMENTS = Array.from(document.querySelector('#products').querySelectorAll('.product'));
     let products = [];
@@ -21,6 +22,7 @@ function getProducts() {
 }
 
 
+// получаем фильтры с отмеченными параметрами
 function getFiltres() {
     const ELEMENTS = document.querySelector('#filters');
 
@@ -52,7 +54,7 @@ function getFiltres() {
 
 // фильтрация
 function executeFiltering(filters, products) {
-    let sortedProducts = [];
+    let sortedProductsId = [];
 
     // перебираем продукты
     products.forEach(function (product) {
@@ -75,7 +77,21 @@ function executeFiltering(filters, products) {
             indicator = verifyMassa(filters.massa, product);
         }
 
-        console.log(indicator);
+        // и тд ...
+        if (indicator === true) {
+            indicator = verifyStrength(filters.strength, product);
+        }
+
+        // и тд ...
+        if (indicator === true) {
+            indicator = verifyFlexibility(filters.flexibility, product);
+        }
+
+        // если продукт подожел под все фильтры добавляем его ID в массив
+        if (indicator === true) {
+            sortedProductsId.push(product.id);
+        }
+
     });
 
 
@@ -127,30 +143,67 @@ function executeFiltering(filters, products) {
         return status;
     }
 
+    // проверяем фильтр - прочность
+    function verifyStrength(strength, product) {
+        let status = false;
+        status = (strength.length === 0) ? true : false;
+        strength.forEach(function (item) {
+            if (item === product.strength) {
+                status = true;
+            }
+        });
+        return status;
+    }
 
-    return sortedProducts;
+    // проверяем фильтр - гибкость
+    function verifyFlexibility(flexibility, product) {
+        let status = false;
+        status = (flexibility.length === 0) ? true : false;
+        flexibility.forEach(function (item) {
+            if (item === product.flexibility) {
+                status = true;
+            }
+        });
+        return status;
+    }
+
+    return sortedProductsId;        // возвращаем ID всех товаров прошедших проверку
+}
+
+
+// перерисовка вывода продуктов после фильтрации
+function executeRedrawProducts(sortedProductsId) {
+    const ELEMENTS = Array.from(document.querySelector('#products').querySelectorAll('.product'));
+
+    ELEMENTS.forEach(function (product) {
+        product.classList.add('hide');
+        let id = product.querySelector('.id').getAttribute('data-id');
+        executeVerifyId(id, product)
+    });
+
+    function executeVerifyId(id, product) {
+        sortedProductsId.forEach(function (sortedId) {
+            if (sortedId == id) {
+                product.classList.remove('hide');
+            }
+        });
+    }
 }
 
 
 (function () {
     const BUTTON = document.querySelector('#filterButton');
-    const RESULT = document.querySelector('#filterResult');
 
     let filters = {};
     let products = [];
-    let sortedProducts = [];
+    let sortedProductsId = [];
 
     BUTTON.addEventListener('click', onFilterButtonClick);
 
     function onFilterButtonClick() {
         products = getProducts();
         filters = getFiltres();
-
-        console.log(filters);
-        console.log(products);
-
-        sortedProducts = executeFiltering(filters, products);
-
-        //console.log(sortedProducts);
+        sortedProductsId = executeFiltering(filters, products);
+        executeRedrawProducts(sortedProductsId);
     }
 })(); 

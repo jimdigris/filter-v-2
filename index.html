@@ -29,54 +29,7 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="row" id="products">
-
-            <div class="col-sm-4">
-                <div class="product">
-                    <div data-id='1' class="id">Название товара 1</div>
-                    <hr>
-                    <div data-color='red' class="color">Цвет = red</div>
-                    <div data-size='S' class="size">Размер = S</div>
-                    <div data-direction='top' class="direction">Направление = top</div>
-                    <div data-massa='20' class="massa">Масса = 20</div>
-                    <div data-strength='100' class="strength">Прочность = 100</div>
-                    <div data-flexibility='max' class="flexibility">Гибкость = max</div>
-                </div>
-            </div>
-            <!--
-            <div class="col-sm-4">
-                <div class="product">
-                    <div data-id='2' class="id">Название товара 2</div>
-                    <hr>
-                    <div data-color='yellow' class="color">Цвет = yellow</div>
-                    <div data-size='XL' class="size">Размер = XL</div>
-                    <div data-direction='top' class="direction">Направление = top</div>
-                    <div data-massa='30' class="massa">Масса = 30</div>
-                    <div data-strength='200' class="strength">Прочность = 200</div>
-                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="product">
-                    <div data-id='3' class="id">Название товара 3</div>
-                    <hr>
-                    <div data-color='blue' class="color">Цвет = blue</div>
-                    <div data-size='M' class="size">Размер = M</div>
-                    <div data-direction='bottom' class="direction">Направление = bottom</div>
-                    <div data-massa='10' class="massa">Масса = 10</div>
-                    <div data-strength='300' class="strength">Прочность = 300</div>
-                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
-                </div>
-            </div>
-        -->
-        </div>
-    </div>
-
     <hr>
-
     <div class="container">
         <div class="row" id="filters">
             <!-- чекбоксы -->
@@ -179,16 +132,131 @@
                 <button type="button" class="btn btn-primary btn-sm btn-block" id="filterButton">Фильтровать</button>
             </div>
         </div>
+    </div>
 
-        <hr>
+    <hr>
 
-        <div class="row">
-            <div class="col-sm-12">Результат фильтрации:</div>
-            <div class="col-sm-12" id="filterResult">
+    <div class="container">
+        <div class="row" id="products">
 
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='1' class="id">Название товара 1</div>
+                    <hr>
+                    <div data-color='red' class="color">Цвет = red</div>
+                    <div data-size='S' class="size">Размер = S</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='20' class="massa">Масса = 20</div>
+                    <div data-strength='100' class="strength">Прочность = 100</div>
+                    <div data-flexibility='max' class="flexibility">Гибкость = max</div>
+                </div>
             </div>
-        </div>
 
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='2' class="id">Название товара 2</div>
+                    <hr>
+                    <div data-color='yellow' class="color">Цвет = yellow</div>
+                    <div data-size='XL' class="size">Размер = XL</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='30' class="massa">Масса = 30</div>
+                    <div data-strength='200' class="strength">Прочность = 200</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='3' class="id">Название товара 3</div>
+                    <hr>
+                    <div data-color='blue' class="color">Цвет = blue</div>
+                    <div data-size='M' class="size">Размер = M</div>
+                    <div data-direction='bottom' class="direction">Направление = bottom</div>
+                    <div data-massa='10' class="massa">Масса = 10</div>
+                    <div data-strength='300' class="strength">Прочность = 300</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='4' class="id">Название товара 4</div>
+                    <hr>
+                    <div data-color='red' class="color">Цвет = red</div>
+                    <div data-size='XL' class="size">Размер = XL</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='30' class="massa">Масса = 30</div>
+                    <div data-strength='200' class="strength">Прочность = 200</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='5' class="id">Название товара 5</div>
+                    <hr>
+                    <div data-color='blue' class="color">Цвет = blue</div>
+                    <div data-size='M' class="size">Размер = M</div>
+                    <div data-direction='left' class="direction">Направление = left</div>
+                    <div data-massa='10' class="massa">Масса = 10</div>
+                    <div data-strength='300' class="strength">Прочность = 300</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='6' class="id">Название товара 6</div>
+                    <hr>
+                    <div data-color='blue' class="color">Цвет = blue</div>
+                    <div data-size='M' class="size">Размер = M</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='20' class="massa">Масса = 20</div>
+                    <div data-strength='300' class="strength">Прочность = 100</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='7' class="id">Название товара 7</div>
+                    <hr>
+                    <div data-color='blue' class="color">Цвет = blue</div>
+                    <div data-size='M' class="size">Размер = M</div>
+                    <div data-direction='left' class="direction">Направление = left</div>
+                    <div data-massa='10' class="massa">Масса = 10</div>
+                    <div data-strength='300' class="strength">Прочность = 100</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='8' class="id">Название товара 8</div>
+                    <hr>
+                    <div data-color='red' class="color">Цвет = red</div>
+                    <div data-size='XL' class="size">Размер = XL</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='30' class="massa">Масса = 30</div>
+                    <div data-strength='200' class="strength">Прочность = 200</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 product">
+                <div class="wrap">
+                    <div data-id='9' class="id">Название товара 9</div>
+                    <hr>
+                    <div data-color='yellow' class="color">Цвет = yellow</div>
+                    <div data-size='XL' class="size">Размер = XL</div>
+                    <div data-direction='top' class="direction">Направление = top</div>
+                    <div data-massa='30' class="massa">Масса = 20</div>
+                    <div data-strength='200' class="strength">Прочность = 200</div>
+                    <div data-flexibility='min' class="flexibility">Гибкость = min</div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script src="script.js"></script>
