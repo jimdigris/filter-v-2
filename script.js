@@ -192,18 +192,36 @@ function executeRedrawProducts(sortedProductsId) {
 
 
 (function () {
-    const BUTTON = document.querySelector('#filterButton');
+    const BUTTON_FILTER = document.querySelector('#filterButton');
+    const BUTTON_CLEAR = document.querySelector('#clearButton');
 
-    let filters = {};
-    let products = [];
-    let sortedProductsId = [];
-
-    BUTTON.addEventListener('click', onFilterButtonClick);
+    BUTTON_FILTER.addEventListener('click', onFilterButtonClick);
+    BUTTON_CLEAR.addEventListener('click', onClearButtonClick);
 
     function onFilterButtonClick() {
-        products = getProducts();
-        filters = getFiltres();
-        sortedProductsId = executeFiltering(filters, products);
+        let products = getProducts();
+        let filters = getFiltres();
+        let sortedProductsId = executeFiltering(filters, products);
         executeRedrawProducts(sortedProductsId);
+    }
+
+    function onClearButtonClick() {
+        let products = Array.from(document.querySelector('#products').querySelectorAll('.product'));
+        let characteristics = Array.from(document.querySelector('#filters').querySelectorAll('.characteristic'));
+
+        products.forEach(function (product) {
+            if (product.classList.contains('hide')) {
+                product.classList.remove('hide');
+            }
+        });
+
+        characteristics.forEach(function (characteristic) {
+            if (characteristic.checked === true) {
+                characteristic.checked = false;
+            }
+            if (characteristic.selected === true) {
+                characteristic.selected = false;
+            }
+        });
     }
 })(); 
