@@ -103,6 +103,17 @@ function executeFiltering(filters, products) {
             if (item === product.color) {               // сравниваем со значением соответствующего свойства продукта
                 status = true;                          // если св-во продукта = одному из отмеченных пунктов фильтра, то он попадает под фильтр
             }
+
+            // проверяем на наличие разделителя "|" (если может быть несколько значений у одного товара)
+            if (product.color.includes('|')) {
+                let arrParametrs = product.color.split('|');				// собираем возможные значения
+                for (let k = 0; k < arrParametrs.length; k++) {				// перебираем их
+                    if (arrParametrs[k] === String(item)) {					// сравниваем со значением соответствующего свойства продукта
+                        status = true;
+                        break;
+                    }
+                }
+            }
         });
         return status;                                  // возвращаем статус проверки, подходит ли продукт по фильтру или нет
     }
@@ -114,6 +125,16 @@ function executeFiltering(filters, products) {
         size.forEach(function (item) {
             if (item === product.size) {
                 status = true;
+            }
+
+            if (product.size.includes('|')) {
+                let arrParametrs = product.size.split('|');
+                for (let k = 0; k < arrParametrs.length; k++) {
+                    if (arrParametrs[k] === String(item)) {
+                        status = true;
+                        break;
+                    }
+                }
             }
         });
         return status;
@@ -127,6 +148,16 @@ function executeFiltering(filters, products) {
             if (item === product.direction) {
                 status = true;
             }
+
+            if (product.direction.includes('|')) {
+                let arrParametrs = product.direction.split('|');
+                for (let k = 0; k < arrParametrs.length; k++) {
+                    if (arrParametrs[k] === String(item)) {
+                        status = true;
+                        break;
+                    }
+                }
+            }
         });
         return status;
     }
@@ -138,6 +169,16 @@ function executeFiltering(filters, products) {
         massa.forEach(function (item) {
             if (item === product.massa) {
                 status = true;
+            }
+
+            if (product.massa.includes('|')) {
+                let arrParametrs = product.massa.split('|');
+                for (let k = 0; k < arrParametrs.length; k++) {
+                    if (arrParametrs[k] === String(item)) {
+                        status = true;
+                        break;
+                    }
+                }
             }
         });
         return status;
@@ -151,6 +192,16 @@ function executeFiltering(filters, products) {
             if (item === product.strength) {
                 status = true;
             }
+
+            if (product.strength.includes('|')) {
+                let arrParametrs = product.strength.split('|');
+                for (let k = 0; k < arrParametrs.length; k++) {
+                    if (arrParametrs[k] === String(item)) {
+                        status = true;
+                        break;
+                    }
+                }
+            }
         });
         return status;
     }
@@ -162,6 +213,16 @@ function executeFiltering(filters, products) {
         flexibility.forEach(function (item) {
             if (item === product.flexibility) {
                 status = true;
+            }
+
+            if (product.flexibility.includes('|')) {
+                let arrParametrs = product.flexibility.split('|');
+                for (let k = 0; k < arrParametrs.length; k++) {
+                    if (arrParametrs[k] === String(item)) {
+                        status = true;
+                        break;
+                    }
+                }
             }
         });
         return status;
